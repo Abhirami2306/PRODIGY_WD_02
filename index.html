@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <video autoplay muted loop id="background-video">
+      <source src="time3.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <h1>STOPWATCH</h1>
+    <div class="countdown-container">
+      <div class="countdown-item">
+        <svg class="circle" viewBox="0 0 100 100">
+          <circle class="background" r="45" cx="50" cy="50"></circle>
+          <circle
+            id="hours-circle"
+            class="foreground"
+            r="45"
+            cx="50"
+            cy="50"
+          ></circle>
+        </svg>
+        <div id="hours" class="time">0</div>
+        <div class="label">Hours</div>
+      </div>
+      <div class="countdown-item">
+        <svg class="circle" viewBox="0 0 100 100">
+          <circle class="background" r="45" cx="50" cy="50"></circle>
+          <circle
+            id="minutes-circle"
+            class="foreground"
+            r="45"
+            cx="50"
+            cy="50"
+          ></circle>
+        </svg>
+        <div id="minutes" class="time">0</div>
+        <div class="label">Minutes</div>
+      </div>
+      <div class="countdown-item">
+        <svg class="circle" viewBox="0 0 100 100">
+          <circle class="background" r="45" cx="50" cy="50"></circle>
+          <circle
+            id="seconds-circle"
+            class="foreground"
+            r="45"
+            cx="50"
+            cy="50"
+          ></circle>
+        </svg>
+        <div id="seconds" class="time">0</div>
+        <div class="label">Seconds</div>
+      </div>
+      <div class="countdown-item">
+        <svg class="circle" viewBox="0 0 100 100">
+          <circle class="background" r="45" cx="50" cy="50"></circle>
+          <circle
+            id="milliseconds-circle"
+            class="foreground"
+            r="45"
+            cx="50"
+            cy="50"
+          ></circle>
+        </svg>
+        <div id="milliseconds" class="time">0</div>
+        <div class="label">Milliseconds</div>
+      </div>
+    </div>
+    <div class="buttons">
+      <button id="start">Start</button>
+      <button id="stop">Stop</button>
+      <button id="reset">Reset</button>
+      <button id="lap">Lap</button>
+    </div>
+    <div class="laps-container">
+      <h2>Laps</h2>
+      <ul id="laps"></ul>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
